@@ -1,3 +1,7 @@
+/* CSS */
+/* This file contains the CSS for all components. */
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,9 +9,602 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./assets/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+
+
+/* Login CSS */
+
+.login_container {
+  height: 100%;
+  width: 50%;
+  min-height: 30vw;
+  margin-left: 25%;
+  margin-top: 8%;
+  display: flex;
+  border-radius: 5px;
 }
+
+.left_login {
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.5);
+  flex: 1;
+  background-image: url('./assets/login.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:rgba(255, 255, 255, 1);
+  text-shadow: 10px 10px 15px rgba(0, 0, 0, 0.7);
+  border-radius: 5px 0px 0px 5px;
+}
+
+.right_login {
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  background-color: aliceblue;
+  flex: 1;
+  border-radius: 0px 5px 5px 0px;
+}
+
+.login_btn{
+  display: grid;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgba(255, 255, 255, 1);
+  width: 20%;
+  margin-left: 1.25%;
+  border-radius: 5px;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.login_btn:hover {
+  background: rgba(254, 254, 254, 1);
+  color: lightgray;
+}
+
+/* Sidebar CSS */
+
+/* opening and closing the sidebar */ 
+
+
+.togglesidebar {
+  margin: 2vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.opensidebar {
+  color: rgb(255, 255, 255);
+  font-size: 50px;
+  background: none;
+}
+
+.closesidebar {
+  margin-left: -10px;
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: flex-;
+  align-items: center;
+}
+
+/* Actual sidebar aesthetics */
+
+.sidebar {
+  background-color: rgb(23, 9, 40);
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  transition: 850ms;
+}
+
+.sidebar.active {
+  left: 0;
+  transition: 350ms;
+}
+
+
+/* sidebar text */
+
+.sidebar_info {
+  margin-left: -30px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 8px 8px 8px 16px;
+  list-style: none;
+  height: 60px;
+}
+
+.sidebar_info a { /* for links */
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);
+  font-size: 20px;
+  width: 95%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  border-radius: 4px;
+}
+
+.sidebar_info a:hover {
+  background-color: rgb(100, 64, 145);
+}
+
+
+/* Individual songs */
+
+.song {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid rgb(256, 256, 256);
+}
+
+.song_button {
+  cursor: pointer;
+  font-size: 1rem;
+  transition: color .25s;
+  border: 0px;
+  background-color: rgba(0, 0, 0, 0);
+  color: #fff;
+  padding: .5rem;
+}
+
+.song_button hover {
+  color: rgba(265, 265, 265, .5);
+}
+
+.song_button active {
+  color: rgba(265, 265, 265, .5);
+}
+
+.about_song {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  justify-content: center;
+  height: auto;
+}
+
+.about_song p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: rgb(256, 256, 256);
+}
+
+
+/* recommendations */
+/* In the new home page */
+
+.recommendations_container {
+  background-image: linear-gradient(rgb(185, 131, 208), rgb(111, 94, 177));
+  justify-content: center;
+  align-items: center;
+  margin-top: -5rem;
+  width: 80%;
+  margin-left: 10%;
+  padding: 5px;
+  height: 80%;
+}
+
+.recommendation_mood {
+  display: flex;
+  justify-content: center;
+}
+
+.recommendation_mood button {
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgba(255, 255, 255, 1);
+  margin: 5px;
+  border-radius: 5px;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  padding: 0.5rem 1rem;
+}
+
+.recommendation_mood button:hover {
+  background: rgba(254, 254, 254, 1);
+  color: lightgray;
+}
+.recommendation_mood button:active {
+  background: rgb(218, 182, 230);
+  color: white;
+}
+
+.recommendations_title {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommendations {
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+  flex: 0;
+  width: 80%;
+  overflow-y: scroll;
+  margin-left: 10%;
+  scroll-behavior: smooth;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  max-height: 15rem;
+  text-overflow: ellipsis;
+}
+
+.recommendation_playlist {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-top: 1px solid rgb(256, 256, 256);
+}
+
+.recommendation_playlist:hover {
+  background-color: rgba(265, 265, 265, .5);
+}
+
+.recommendation_name {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 2rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-weight: 700;
+  color: rgb(256, 256, 256);
+  margin: 15px 0 5px;
+}
+
+.recommendation_user {
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+  font-size: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgb(256, 256, 256);
+  margin: 5px 0 15px;
+}
+
+/* New Playlist CSS */
+
+.new_container {
+  height: 100%;
+  width: 60%;
+  min-height: 30vw;
+  margin-left: 20%;
+  background-color: aqua;
+  display: flex;
+  border-radius: 5px;
+}
+
+.left_new {
+  text-align: center;
+  background-color:rgba(0, 0, 0, 0.5);
+  flex: 1;
+  background-image: linear-gradient(rgb(185, 131, 208), rgb(111, 94, 177));
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:rgba(255, 255, 255, 1);
+  border-radius: 5px 0px 0px 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.right_new {
+  justify-content: center;
+  display: inline-block;
+  text-align: center;
+  background-image: linear-gradient(rgb(43, 20, 53), rgb(73, 60, 126));
+  flex: 1;
+  border-radius: 0px 5px 5px 0px;
+}
+
+
+/* Current playlist CSS */
+
+
+.current_playlist {
+  display: inline-block;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  max-height: 950px;
+  margin-left: 1.5rem;
+  max-height: 20rem;
+  min-width: 22rem;
+  margin-right: 1.5rem;
+
+}
+
+.current_playlist_title {
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  text-align: left;
+  min-width: 15vw;
+  margin: 20px auto;
+  margin-left: -6rem;
+  border-radius: 5px;
+  padding: 5px;
+  max-width: 15vw;
+  min-height: 1.8vw;
+  margin-top: 6px;
+  border: transparent;
+
+}
+
+.current_playlist_title input {
+  font-family: 'Roboto', sans-serif;
+  min-width: 15vw;
+  margin-left: 3rem;
+  margin-top: 1rem;
+  border: transparent;
+  border-radius: 10px;
+  padding: 0.6rem 0.5rem;
+}
+
+
+.current_playlist_button{
+  margin-top: 1rem;
+  align-items: center;
+  display: inline-flex;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgba(255, 255, 255, 1);
+  width: 9%;
+  margin-left: 1.25%;
+  border-radius: 5px;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+  max-width: 5.5vw;
+  margin-top: 6px;
+}
+
+.current_playlist_button:hover {
+  background: rgba(254, 254, 254, 1);
+  color: lightgrey;
+}
+
+.current_playlist_button:active {
+  background: rgb(218, 182, 230);
+  color: white;
+}
+
+
+/* Search bar CSS */
+
+.searchbar { /* container */
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  text-align: left;
+  min-width: 15vw;
+  margin: 10px auto;
+  border-radius: 3px;
+}
+.searchbar input { /* text */
+  font-family: 'Roboto', sans-serif;
+  min-width: 15vw;
+  margin-left: 2.8rem;
+  margin-top: 1rem;
+  background: rgba(254, 254, 254, 1);
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.6rem 0.5rem;
+}
+
+.searchbar_button{
+  margin-top: -35px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgba(255, 255, 255, 1);
+  width: 9%;
+  margin-left: 18rem;
+  border-radius: 5px;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.searchbar_button:hover {
+  background: rgba(254, 254, 254, 1);
+  color: lightgrey;
+}
+
+.searchbar_button:active {
+  background: rgb(218, 182, 230);
+  color: white;
+}
+
+/* Search results CSS */
+
+.searchresults {
+  display: inline-block;
+  flex: 0;
+  min-width: 22rem;
+  margin-left: -13rem;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  margin-right: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 3rem;
+  max-height: 20rem;
+}
+
+
+/* Playlists Page CSS */
+
+.playlists_container {
+  height: 100%;
+  width: 50%;
+  min-height: 30vw;
+  margin-left: 25%;
+  background-color: rgb(185, 131, 208);
+  display: flex;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.playlists_title {
+  display: inline;
+  text-align: center;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  width: 30%;
+  height: 30%;
+  background-image: linear-gradient(rgb(185, 131, 208), rgb(111, 94, 177));
+  border-radius: 5px;
+  color: white;
+  margin-top: 2%;
+  margin-left: 34%;
+
+}
+
+.playlists_search {
+  margin-left: 57%;
+}
+
+.playlist_searchbar { /* container */
+  font-family: 'Roboto', sans-serif;
+  display: inline-block;
+  text-align: left;
+  min-width: 15vw;
+  position: fixed;
+  top: 30%;
+  left: 43%;
+  margin-top: -20px;
+  margin-left: -100px;
+  border-radius: 3px;
+}
+.playlist_searchbar input { /* text */
+  font-family: 'Roboto', sans-serif;
+  min-width: 15vw;
+  margin-left: 2.8rem;
+  margin-top: 1rem;
+  background: rgba(254, 254, 254, 1);
+  border: transparent;
+  border-radius: 5px;
+  padding: 0.6rem 0.5rem;
+}
+
+.playlist_searchbar_button{
+  margin-top: -35px;
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  background: rgba(255, 255, 255, 1);
+  left: 100%;
+  border-radius: 5px;
+  border-color: transparent;
+  color: rgba(0, 0, 0, 1);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+}
+
+.playlist_searchbar_button:hover {
+  background: rgba(254, 254, 254, 1);
+  color: lightgrey;
+}
+
+.playlist_searchbar_button:active {
+  background: rgb(218, 182, 230);
+  color: white;
+}
+
+/* General CSS */
+
+span {
+  margin-left: 12px;
+}
+  
+h1 {
+  font-size: 4rem;
+  font-family: 'Roboto', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  text-align: center;
+  color: rgb(256, 256, 256);
+
+}
+h2 {
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+  color: white;
+}
+h3 {
+  font-family: 'Roboto', sans-serif;
+
+  text-align: center;
+  font-size: 1.25rem;
+  color: rgb(256, 256, 256);
+
+}
+h4 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  color:rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+
+
