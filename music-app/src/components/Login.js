@@ -14,7 +14,7 @@ export default function Login() {
                     <br />
                     <br />
                     <br />
-                    <h1>PlayList</h1>
+                    <h1>SHUF.L</h1>
                     <br />
                     <br />
                 </div>
